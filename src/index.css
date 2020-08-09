@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+    margin: 20px auto;
+    max-width: 100%;
+    width: 450px;
+}
+
+.tools {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .3rem 0;
+    margin: 0;
+}
+.item + .item {
+    border-top: 1px dotted #ccc;
+}
+
+.item > * {
+    padding: 0 .3rem;
+}
+
+.item span:first-child {
+    flex: 1;
+}
+.item span {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item button:not([disabled]) {
+    cursor: pointer;
+}
+
+.item button {
+    color: #fff;
+    background-color: salmon;
+    border: none;
+    line-height: 1;
+    padding: .3rem;
+}
+
+.item.process {
+    color: #fff;
+    background: red;
+    background-image: repeating-linear-gradient(45deg,
+    transparent,
+    transparent 35px,
+    rgba(255,255,255, .5) 35px,
+    rgba(255,255,255, .5) 70px);
+    animation: backgroundAnimated 1s linear infinite;
+}
+
+.item.process button {
+    opacity: 0;
+}
+
+@keyframes backgroundAnimated {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100px 0;
+    }
+}
